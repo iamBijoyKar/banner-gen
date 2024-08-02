@@ -28,6 +28,22 @@ export default function EditBannerTemplateBs({
 
   const [bannerData, setBannerData] = useState<BannerData>(bannerToBeEdited);
 
+  const onImageInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      setBannerData({
+        ...bannerData,
+        image: {
+          ...bannerData.image,
+          src: e.target?.result as string,
+        },
+      });
+    };
+    reader.readAsDataURL(file);
+  };
+
   useEffect(() => {
     setBannerData(bannerToBeEdited);
   }, [editBannerId]);
@@ -38,7 +54,7 @@ export default function EditBannerTemplateBs({
         <div className="w-[300px]">
           <Temp1 data={bannerData} />
         </div>
-        <div className="flex flex-col w-1/2">
+        <div className="flex flex-col w-1/2 ">
           <div className="flex flex-col w-full">
             <label htmlFor="" className="text-md">
               Title
@@ -294,6 +310,19 @@ export default function EditBannerTemplateBs({
               </label>
             </div>
           )}
+          <hr className=" h-1 my-2" />
+          <div className="flex gap-2">
+            <label htmlFor="" className="text-sm w-full items-center">
+              <span className="text-lg">Image</span>
+              <input
+                onInput={onImageInput}
+                type="file"
+                name=""
+                id=""
+                className="w-full text-sm border px-2 py-1 rounded"
+              />
+            </label>
+          </div>
         </div>
       </div>
       <div className="mt-2 flex gap-3 items-center ">
