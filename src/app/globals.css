@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer theme {
   :root {
     --primary-bg: 163 183 202;
@@ -20,4 +19,13 @@
       --secondary-text: 255 255 255;
     }
   }
+}
+
+#search-modal::backdrop {
+  backdrop-filter: blur(3px);
+  background-image: radial-gradient(
+    circle,
+    #8a8a8a5d 10%,
+    rgba(245, 245, 245, 0) 100%
+  );
 }
