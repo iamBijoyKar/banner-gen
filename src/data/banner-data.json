@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "text": "Explore the stunning beauty of the Alps",
+      "position": {
+        "x": 18,
+        "y": 15
+      },
+      "style": {
+        "color": "#000000",
+        "fontSize": "24px",
+        "fontWeight": "bold"
+      }
+    },
+    "description": {
+      "text": "Enjoy world-class slopes and winter sports in famous resorts like Chamonix, St. Moritz, and Zermatt.",
+      "position": {
+        "x": 10,
+        "y": 340
+      },
+      "style": {
+        "color": "#00202e",
+        "fontSize": "16px"
+      }
+    },
+    "image": {
+      "src": "https://images.unsplash.com/photo-1722233987129-61dc344db8b6",
+      "type": "square",
+      "dimensions": {
+        "width": 600,
+        "height": 300
+      }
+    }
+  },
+  {
+    "id": 2,
+    "title": {
+      "text": "Apply for a Schengen Visa now",
+      "position": {
+        "x": 20,
+        "y": 60
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "20px"
+      }
+    },
+    "description": {
+      "text": "Get your Schengen Visa in 3 easy steps. Apply online, submit your documents, and get your visa in 15 days.",
+      "position": {
+        "x": 20,
+        "y": 320
+      },
+      "style": {
+        "color": "#fffffff5",
+        "fontSize": "16px"
+      }
+    },
+    "btn": {
+      "text": "Apply Now",
+      "position": {
+        "x": 20,
+        "y": 250
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "16px",
+        "backgroundColor": "#194a7a",
+        "padding": "10px 20px",
+        "borderRadius": "5px"
+      }
+    },
+    "image": {
+      "src": "https://images.unsplash.com/photo-1720180320258-f0a958016a63",
+      "type": "square",
+      "dimensions": {
+        "width": 600,
+        "height": 300
+      }
+    }
+  },
+  {
+    "id": 3,
+    "title": {
+      "text": "Book your make-up session now",
+      "position": {
+        "x": 10,
+        "y": 100
+      },
+      "style": {
+        "color": "#fcedf2",
+        "fontSize": "30px",
+        "fontWeight": "bold"
+      }
+    },
+    "description": {
+      "text": "Make-up artists are available for weddings, parties, and other special occasions. Book now and get a free consultation.",
+      "position": {
+        "x": 10,
+        "y": 230
+      },
+      "style": {
+        "color": "#edf2fa",
+        "fontSize": "14px"
+      }
+    },
+    "btn": {
+      "text": "Book Now",
+      "position": {
+        "x": 10,
+        "y": 320
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "16px",
+        "backgroundColor": "#ff6f61",
+        "padding": "10px 20px",
+        "borderRadius": "5px"
+      }
+    },
+    "image": {
+      "src": "https://images.unsplash.com/photo-1557672172-298e090bd0f1",
+      "type": "square",
+      "dimensions": {
+        "width": 600,
+        "height": 300
+      }
+    }
+  },
+  {
+    "id": 4,
+    "title": {
+      "text": "Banner 1",
+      "position": {
+        "x": 10,
+        "y": 10
+      },
+      "style": {
+        "color": "red",
+        "fontSize": "20px"
+      }
+    },
+    "description": {
+      "text": "This is banner 4",
+      "position": {
+        "x": 10,
+        "y": 40
+      },
+      "style": {
+        "color": "blue",
+        "fontSize": "16px"
+      }
+    },
+    "image": {
+      "src": "https://images.unsplash.com/photo-1558244661-d248897f7bc4",
+      "type": "square",
+      "dimensions": {
+        "width": 600,
+        "height": 300
+      }
+    }
+  }
+]

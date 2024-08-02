@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className="w-full min-h-screen bg-primary-bg text-primary-text">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
