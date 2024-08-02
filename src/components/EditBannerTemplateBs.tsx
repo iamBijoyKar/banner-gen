@@ -167,12 +167,12 @@ export default function EditBannerTemplateBs({
                 rows={4}
                 name=""
                 id=""
-                maxLength={50}
+                maxLength={150}
                 className="w-full text-sm border px-2 py-1 rounded"
                 value={bannerData.description.text}
               ></textarea>
               <div className="w-full -mt-2 text-[10px] text-right">
-                {bannerData.description.text.length}/50
+                {bannerData.description.text.length}/150
               </div>
             </label>
             <div className="flex gap-2">
@@ -269,9 +269,34 @@ export default function EditBannerTemplateBs({
               </label>
             </div>
           </div>
+          <hr className=" h-1 my-3" />
+          {bannerData.btn && (
+            <div className="">
+              <label htmlFor="" className="text-md">
+                Button
+                <input
+                  onChange={(e) =>
+                    setBannerData({
+                      ...bannerData,
+                      btn: { ...bannerData.btn, text: e.target.value },
+                    })
+                  }
+                  maxLength={20}
+                  type="text"
+                  name=""
+                  id=""
+                  className="w-full text-sm border px-2 py-1 rounded"
+                  value={bannerData.btn.text}
+                />
+                <div className="w-full mt-0 text-[10px] text-right">
+                  {bannerData.btn.text.length}/20
+                </div>
+              </label>
+            </div>
+          )}
         </div>
       </div>
-      <div className="mt-4 flex gap-3 items-center ">
+      <div className="mt-2 flex gap-3 items-center ">
         <button
           onClick={closeEdit}
           className="bg-green-500 text-white px-4 py-2 rounded"
