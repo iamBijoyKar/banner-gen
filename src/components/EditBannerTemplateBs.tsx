@@ -26,11 +26,7 @@ export default function EditBannerTemplateBs({
 }: EditBannerTemplateBsProps) {
   const bannerToBeEdited = data.find((item) => item.id === editBannerId);
 
-  if (!bannerToBeEdited) {
-    return <div>No data found</div>;
-  }
-
-  const [bannerData, setBannerData] = useState<BannerData>(bannerToBeEdited);
+  const [bannerData, setBannerData] = useState<BannerData>(bannerToBeEdited!); // trust me it will be there
   const [downloadLoading, setDownloadLoading] = useState(false);
 
   const templateRef = useRef<HTMLDivElement>(null);
@@ -74,8 +70,12 @@ export default function EditBannerTemplateBs({
   };
 
   useEffect(() => {
-    setBannerData(bannerToBeEdited);
+    setBannerData(bannerToBeEdited!); // trust me it will be there
   }, [editBannerId]);
+
+  if (!bannerData) {
+    return <div>No data found</div>;
+  }
 
   return (
     <div className="p-4 w-[90vw] sm:w-[70vw] md:w-[80vw] lg:w-[900px] rounded ">
