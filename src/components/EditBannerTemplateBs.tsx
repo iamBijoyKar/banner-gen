@@ -52,7 +52,7 @@ export default function EditBannerTemplateBs({
     <div className="p-4 w-[50vw] rounded ">
       <div className="flex gap-4">
         <div className="w-[300px]">
-          <Temp1 data={bannerData} />
+          <Temp1 data={bannerData} hoverEffect={false} />
         </div>
         <div className="flex flex-col w-1/2 ">
           <div className="flex flex-col w-full">

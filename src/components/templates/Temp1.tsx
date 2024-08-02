@@ -3,9 +3,14 @@ import Image from "next/image";
 import React from "react";
 
 // Types
-import type { BannerData as Temp1Props } from "@/types";
+import type { BannerData } from "@/types";
 
-export default function Temp1({ data }: { data: Temp1Props }) {
+type Temp1Props = {
+  data: BannerData;
+  hoverEffect?: boolean;
+};
+
+export default function Temp1({ data, hoverEffect = true }: Temp1Props) {
   return (
     <div className="relative w-full h-[500px] overflow-hidden group">
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/60 to-transparent z-10"></div>
@@ -14,7 +19,9 @@ export default function Temp1({ data }: { data: Temp1Props }) {
         alt={data.title?.text}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        className="group-hover:scale-105 transform transition-transform duration-300 ease-in-out z-0"
+        className={`${
+          hoverEffect ? "group-hover:scale-105" : ""
+        } transform transition-transform duration-300 ease-in-out z-0`}
       />
       {data.title && (
         <div
