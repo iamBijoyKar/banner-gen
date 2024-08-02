@@ -1,10 +1,14 @@
 "use client";
 
 // Libraries import
-import { useEffect, useState } from "react";
-
+import { useEffect, useState, useRef } from "react";
+import domtoimage from "dom-to-image";
+import Image from "next/image";
 // Components import
 import Temp1 from "./templates/Temp1";
+
+// Assets import
+import loadingSvg from "@/assets/loading.svg";
 
 // Types
 import type { BannerData } from "@/types";
@@ -27,7 +31,11 @@ export default function EditBannerTemplateBs({
   }
 
   const [bannerData, setBannerData] = useState<BannerData>(bannerToBeEdited);
+  const [downloadLoading, setDownloadLoading] = useState(false);
 
+  const templateRef = useRef<HTMLDivElement>(null);
+
+  // Function to update custom image
   const onImageInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -44,6 +52,27 @@ export default function EditBannerTemplateBs({
     reader.readAsDataURL(file);
   };
 
+  // Function to download the banner
+  const downloadBanner = () => {
+    setDownloadLoading(true);
+    if (templateRef.current) {
+      domtoimage
+        .toPng(templateRef.current)
+        .then((dataUrl) => {
+          const link = document.createElement("a");
+          link.download = "banner.png";
+          link.href = dataUrl;
+          link.click();
+        })
+        .catch((error) => {
+          console.error("oops, something went wrong!", error);
+        });
+    }
+    setTimeout(() => {
+      setDownloadLoading(false);
+    }, 3000);
+  };
+
   useEffect(() => {
     setBannerData(bannerToBeEdited);
   }, [editBannerId]);
@@ -52,7 +81,12 @@ export default function EditBannerTemplateBs({
     <div className="p-4 w-[90vw] sm:w-[70vw] md:w-[80vw] lg:w-[900px] rounded ">
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
         <div className="w-[300px] flex justify-center">
-          <Temp1 data={bannerData} hoverEffect={false} />
+          <Temp1
+            data={bannerData}
+            hoverEffect={false}
+            ref={templateRef}
+            preview={false}
+          />
         </div>
         <div className="flex flex-col md:w-1/2 ">
           <div className="flex flex-col w-full">
@@ -325,16 +359,26 @@ export default function EditBannerTemplateBs({
           </div>
         </div>
       </div>
-      <div className="mt-2 flex gap-3 items-center ">
+      <div className="mt-4 flex justify-center gap-3 items-center ">
         <button
-          onClick={closeEdit}
-          className="bg-green-500 text-white px-4 py-2 rounded"
+          onClick={downloadBanner}
+          className="bg-green-500 text-white w-[120px] h-10 px-4 py-2 rounded flex justify-center items-center gap-2 hover:bg-green-600 active:translate-y-1 active:shadow-inner"
         >
-          Download
+          {downloadLoading ? (
+            <Image
+              src={loadingSvg}
+              alt="loading"
+              className=""
+              width={27}
+              height={27}
+            />
+          ) : (
+            "Download"
+          )}
         </button>
         <button
           onClick={closeEdit}
-          className="bg-gray-500 text-white px-4 py-2 rounded"
+          className="bg-gray-500 hover:bg-gray-600 active:translate-y-1 active:shadow-inner text-white px-4 py-2 rounded"
         >
           Close
         </button>
