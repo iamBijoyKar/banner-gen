@@ -49,12 +49,12 @@ export default function EditBannerTemplateBs({
   }, [editBannerId]);
 
   return (
-    <div className="p-4 w-[50vw] rounded ">
-      <div className="flex gap-4">
-        <div className="w-[300px]">
+    <div className="p-4 w-[90vw] sm:w-[70vw] md:w-[80vw] lg:w-[900px] rounded ">
+      <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+        <div className="w-[300px] flex justify-center">
           <Temp1 data={bannerData} hoverEffect={false} />
         </div>
-        <div className="flex flex-col w-1/2 ">
+        <div className="flex flex-col md:w-1/2 ">
           <div className="flex flex-col w-full">
             <label htmlFor="" className="text-md">
               Title
