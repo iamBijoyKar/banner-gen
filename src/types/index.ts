@@ -1,6 +1,6 @@
 export type BannerData = {
   id: number;
-  template: string;
+  template?: string;
   title: {
     text: string;
     position: {
