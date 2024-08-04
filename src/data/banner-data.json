@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "template": "template1",
     "title": {
       "text": "Explore the stunning beauty of the Alps",
       "position": {
@@ -49,6 +50,7 @@
   },
   {
     "id": 2,
+    "template": "template1",
     "title": {
       "text": "Apply for a Schengen Visa now",
       "position": {
@@ -97,6 +99,7 @@
   },
   {
     "id": 3,
+    "template": "template1",
     "title": {
       "text": "Book your make-up session now",
       "position": {
@@ -145,6 +148,7 @@
   },
   {
     "id": 4,
+    "template": "template1",
     "title": {
       "text": "Banner 1",
       "position": {
