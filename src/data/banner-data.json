@@ -237,5 +237,156 @@
         "y": 150
       }
     }
+  },
+  {
+    "id": 6,
+    "template": "template1",
+    "title": {
+      "text": "Trendy Summer Collection",
+      "position": {
+        "x": 0,
+        "y": 80
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "28px",
+        "fontWeight": "600",
+        "textAlign": "center"
+      }
+    },
+    "description": {
+      "text": "New arrivals for the summer season, get the latest trends and styles.",
+      "position": {
+        "x": 0,
+        "y": 250
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "14px",
+        "textAlign": "center",
+        "margin": "0 20px"
+      }
+    },
+    "btn": {
+      "text": "Shop Now",
+      "position": {
+        "x": 90,
+        "y": 350
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "16px",
+        "backgroundColor": "#057dcd",
+        "padding": "10px 20px",
+        "borderRadius": "5px"
+      }
+    },
+    "image": {
+      "src": "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3",
+      "type": "square",
+      "dimensions": {
+        "width": 200,
+        "height": 200
+      },
+      "position": {
+        "x": 50,
+        "y": 150
+      }
+    }
+  },
+  {
+    "id": 7,
+    "template": "template2",
+    "title": {
+      "text": "Summer Music Festival",
+      "position": {
+        "x": 15,
+        "y": 50
+      },
+      "style": {
+        "color": "#141e26",
+        "fontSize": "24px",
+        "fontWeight": "bold",
+        "textAlign": "center"
+      }
+    },
+    "description": {
+      "text": "Enjoy live music performances by top artists and bands.",
+      "position": {
+        "x": 0,
+        "y": 430
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "14px",
+        "textAlign": "center",
+        "margin": "0 20px"
+      }
+    },
+    "image": {
+      "src": "https://images.unsplash.com/photo-1558304879-a4cc241ad8b5",
+      "type": "square",
+      "dimensions": {
+        "width": 200,
+        "height": 300
+      },
+      "position": {
+        "x": 50,
+        "y": 100
+      }
+    }
+  },
+  {
+    "id": 8,
+    "template": "template1",
+    "title": {
+      "text": "Summer Travel Deals",
+      "position": {
+        "x": 40,
+        "y": 80
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "28px",
+        "fontWeight": "700"
+      }
+    },
+    "description": {
+      "text": "Book your summer vacation now and save big on flights and hotels.",
+      "position": {
+        "x": 30,
+        "y": 380
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "14px"
+      }
+    },
+    "btn": {
+      "text": "Book Now",
+      "position": {
+        "x": 30,
+        "y": 320
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "16px",
+        "backgroundColor": "#141e26bf",
+        "padding": "10px 20px",
+        "borderRadius": "5px"
+      }
+    },
+    "image": {
+      "src": "https://images.unsplash.com/photo-1512100356356-de1b84283e18",
+      "type": "square",
+      "dimensions": {
+        "width": 200,
+        "height": 200
+      },
+      "position": {
+        "x": 50,
+        "y": 150
+      }
+    }
   }
 ]
