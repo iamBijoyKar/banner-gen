@@ -6,6 +6,8 @@ import { MdEdit } from "react-icons/md";
 
 // Components import
 import Temp1 from "./templates/Temp1";
+import Temp2 from "./templates/Temp2";
+import Temp3 from "./templates/Temp3";
 
 // Types
 import type { BannerData } from "@/types";
@@ -22,7 +24,14 @@ export default function BannerImageComp({
   key,
   openEdit,
 }: BannerImageCompProps) {
-  let Template = Temp1;
+  let Template;
+  if (data.template === "template1") {
+    Template = Temp1;
+  } else if (data.template === "template2") {
+    Template = Temp2;
+  } else {
+    Template = Temp3;
+  }
 
   // const [isMounted, setIsMounted] = useState(false);
   // Lazy Load the Template based on the data.template

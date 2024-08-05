@@ -148,35 +148,93 @@
   },
   {
     "id": 4,
-    "template": "template1",
+    "template": "template2",
     "title": {
-      "text": "Banner 1",
+      "text": "Ice Cream Festival",
       "position": {
-        "x": 10,
-        "y": 10
+        "x": 40,
+        "y": 60
       },
       "style": {
-        "color": "red",
-        "fontSize": "20px"
+        "color": "#ffc6ff",
+        "fontSize": "24px",
+        "fontWeight": "bold"
       }
     },
     "description": {
-      "text": "This is banner 4",
+      "text": "Tasty and refreshing Ice Creams",
       "position": {
-        "x": 10,
-        "y": 40
+        "x": 40,
+        "y": 430
       },
       "style": {
-        "color": "blue",
-        "fontSize": "16px"
+        "color": "#ffffff",
+        "fontSize": "14px"
       }
     },
     "image": {
-      "src": "https://images.unsplash.com/photo-1558244661-d248897f7bc4",
+      "src": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f",
       "type": "square",
       "dimensions": {
-        "width": 600,
+        "width": 200,
         "height": 300
+      },
+      "position": {
+        "x": 50,
+        "y": 120
+      }
+    }
+  },
+  {
+    "id": 5,
+    "template": "template3",
+    "title": {
+      "text": "Summer Sale",
+      "position": {
+        "x": 60,
+        "y": 80
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "28px",
+        "fontWeight": "500"
+      }
+    },
+    "description": {
+      "text": "Get up to 50% off on selected items",
+      "position": {
+        "x": 30,
+        "y": 380
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "14px"
+      }
+    },
+    "btn": {
+      "text": "Shop Now",
+      "position": {
+        "x": 90,
+        "y": 420
+      },
+      "style": {
+        "color": "#ffffff",
+        "fontSize": "16px",
+        "backgroundColor": "#f9a826",
+        "padding": "10px 20px",
+        "borderRadius": "5px"
+      }
+    },
+    "image": {
+      "src": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b",
+      "type": "square",
+      "dimensions": {
+        "width": 200,
+        "height": 200
+      },
+      "position": {
+        "x": 50,
+        "y": 150
       }
     }
   }

@@ -6,6 +6,8 @@ import domtoimage from "dom-to-image";
 import Image from "next/image";
 // Components import
 import Temp1 from "./templates/Temp1";
+import Temp2 from "./templates/Temp2";
+import Temp3 from "./templates/Temp3";
 
 // Assets import
 import loadingSvg from "@/assets/loading.svg";
@@ -25,6 +27,7 @@ export default function EditBannerTemplateBs({
   closeEdit,
 }: EditBannerTemplateBsProps) {
   const bannerToBeEdited = data.find((item) => item.id === editBannerId);
+  let Temp: any;
 
   const [bannerData, setBannerData] = useState<BannerData>(bannerToBeEdited!); // trust me it will be there
   const [downloadLoading, setDownloadLoading] = useState(false);
@@ -77,11 +80,20 @@ export default function EditBannerTemplateBs({
     return <div>No data found</div>;
   }
 
+  // Selecting the template
+  if (bannerData.template && bannerData.template === "template1") {
+    Temp = Temp1;
+  } else if (bannerData.template && bannerData.template === "template2") {
+    Temp = Temp2;
+  } else {
+    Temp = Temp3;
+  }
+
   return (
     <div className="p-4 w-[90vw] sm:w-[70vw] md:w-[80vw] lg:w-[900px] rounded ">
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
         <div className="w-[300px] flex justify-center">
-          <Temp1
+          <Temp
             data={bannerData}
             hoverEffect={false}
             ref={templateRef}
