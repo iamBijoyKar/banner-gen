@@ -90,7 +90,7 @@ export default function EditBannerTemplateBs({
   }
 
   return (
-    <div className="p-4 w-[90vw] sm:w-[70vw] md:w-[80vw] lg:w-[900px] rounded ">
+    <div className="p-4 w-[90vw] sm:w-[70vw] md:w-[80vw] lg:w-[900px] rounded bg-secondary-bg">
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
         <div className="w-[300px] flex justify-center">
           <Temp
@@ -340,7 +340,7 @@ export default function EditBannerTemplateBs({
                   onChange={(e) =>
                     setBannerData({
                       ...bannerData,
-                      btn: { ...bannerData.btn, text: e.target.value },
+                      btn: { ...bannerData.btn!, text: e.target.value }, // trust me it will be there
                     })
                   }
                   maxLength={20}
