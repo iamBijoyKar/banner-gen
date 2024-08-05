@@ -4,7 +4,7 @@
 
 @layer theme {
   :root {
-    --primary-bg: 163 183 202;
+    --primary-bg: 240 240 240;
     --secondary-bg: 255 255 255;
     --primary-text: 0 0 0;
     --secondary-text: 0 0 0;
@@ -13,8 +13,8 @@
   /* Dark mode */
   @media (prefers-color-scheme: dark) {
     :root {
-      --primary-bg: 0 32 46;
-      --secondary-bg: 0 0 0;
+      --primary-bg: 16 16 16;
+      --secondary-bg: 225 228 232;
       --primary-text: 255 255 255;
       --secondary-text: 255 255 255;
     }
