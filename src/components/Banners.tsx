@@ -95,7 +95,12 @@ export default function Banners() {
   }, [isEdit]);
 
   return (
-    <div className="flex">
+    <div className="flex relative">
+      {searchValue.trim() && !isSearchOpen && (
+        <div className="absolute top-0 left-[40%] italic">
+          <h3>Search Results for "{searchValue}"</h3>
+        </div>
+      )}
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 my-12">
         {bannresData.map((item) => (
           <BannerImageComp key={item.id} openEdit={openEdit} data={item} />
