@@ -121,10 +121,10 @@ export default function EditBannerTemplateBs({
                 {bannerData.title.text.length}/50
               </div>
             </label>
-            <div className="flex gap-2">
+            <div className="flex gap-2 justify-between">
               <label
                 htmlFor=""
-                className="text-sm w-1/2 flex items-center gap-2"
+                className="text-sm flex items-center gap-2 w-fit"
               >
                 <span className="text-sm">Size</span>
                 <div className="relative">
@@ -157,7 +157,7 @@ export default function EditBannerTemplateBs({
               </label>
               <label
                 htmlFor=""
-                className="text-sm w-1/2 flex items-center gap-2"
+                className="text-sm flex items-center gap-2 w-fit"
               >
                 <span className="text-sm">Weight</span>
                 <select
@@ -187,7 +187,7 @@ export default function EditBannerTemplateBs({
               </label>
               <label
                 htmlFor=""
-                className="text-sm w-1/2 flex items-center gap-2"
+                className="text-sm flex items-center gap-2 w-fit"
               >
                 <span className="text-sm">Color</span>
                 <input
@@ -237,10 +237,10 @@ export default function EditBannerTemplateBs({
                 {bannerData.description.text.length}/150
               </div>
             </label>
-            <div className="flex gap-2">
+            <div className="flex gap-2 justify-between">
               <label
                 htmlFor=""
-                className="text-sm w-1/2 flex items-center gap-2"
+                className="text-sm flex items-center gap-2 w-fit"
               >
                 <span className="text-sm">Size</span>
                 <div className="relative">
@@ -276,7 +276,7 @@ export default function EditBannerTemplateBs({
               </label>
               <label
                 htmlFor=""
-                className="text-sm w-1/2 flex items-center gap-2"
+                className="text-sm flex items-center gap-2 w-fit"
               >
                 <span className="text-sm">Weight</span>
                 <select
@@ -306,7 +306,7 @@ export default function EditBannerTemplateBs({
               </label>
               <label
                 htmlFor=""
-                className="text-sm w-1/2 flex items-center gap-2"
+                className="text-sm flex items-center gap-2 w-fit"
               >
                 <span className="text-sm">Color</span>
                 <input
@@ -357,7 +357,7 @@ export default function EditBannerTemplateBs({
             </div>
           )}
           <hr className=" h-1 my-2" />
-          <div className="flex gap-2">
+          <div className="flex gap-2 justify-between">
             <label htmlFor="" className="text-sm w-full items-center">
               <span className="text-lg">Image</span>
               <input
