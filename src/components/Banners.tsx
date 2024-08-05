@@ -101,7 +101,7 @@ export default function Banners() {
           <BannerImageComp key={item.id} openEdit={openEdit} data={item} />
         ))}
       </div>
-      <div className="hidden sm:flex justify-center w-14 z-40 mt-12">
+      <div className="fixed bottom-10 right-4 sm:static sm:flex justify-center w-14 z-40 mt-12">
         <button
           onClick={openSearch}
           className="sticky top-10 flex items-center justify-center w-10 h-10 bg-slate-600/50 rounded hover:bg-slate-600/70"
