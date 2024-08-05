@@ -97,8 +97,15 @@ export default function Banners() {
   return (
     <div className="flex relative">
       {searchValue.trim() && !isSearchOpen && (
-        <div className="absolute top-0 left-[40%] italic">
-          <h3>Search Results for "{searchValue}"</h3>
+        <div className="absolute top-0 left-[40%] ">
+          <h3>
+            Search Results for{" "}
+            <span className="italic">
+              {`"`}
+              {searchValue}
+              {`"`}
+            </span>
+          </h3>
         </div>
       )}
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 my-12">
