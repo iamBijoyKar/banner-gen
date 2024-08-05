@@ -66,6 +66,7 @@ function Temp2(
             color: data.title.style.color,
             fontSize: data.title.style.fontSize,
             fontWeight: data.title.style?.fontWeight,
+            textAlign: data.title.style?.textAlign as "center",
           }}
         >
           <span>{data.title.text}</span>
@@ -80,6 +81,8 @@ function Temp2(
             color: data.description.style.color,
             fontSize: data.description.style.fontSize,
             fontWeight: data.description.style?.fontWeight,
+            textAlign: data.description.style?.textAlign as "center",
+            margin: data.description.style?.margin,
           }}
         >
           <span>{data.description.text}</span>
