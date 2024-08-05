@@ -11,6 +11,7 @@ export type BannerData = {
       color: string;
       fontSize: string;
       fontWeight?: string;
+      textAlign?: string;
     };
   };
   description: {
@@ -23,6 +24,8 @@ export type BannerData = {
       color: string;
       fontSize: string;
       fontWeight?: string;
+      textAlign?: string;
+      margin?: string;
     };
   };
   btn?: {
