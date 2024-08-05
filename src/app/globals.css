@@ -22,10 +22,6 @@
 }
 
 #search-modal::backdrop {
-  backdrop-filter: blur(3px);
-  background-image: radial-gradient(
-    circle,
-    #8a8a8a5d 10%,
-    rgba(245, 245, 245, 0) 100%
-  );
+  backdrop-filter: blur(2px);
+  background-image: radial-gradient(circle, #69696973 5%, transparent 100%);
 }
